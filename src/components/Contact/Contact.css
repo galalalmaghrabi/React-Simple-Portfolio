@@ -1,0 +1,118 @@
+/* استايلات قسم Contact Me */
+.contact {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  background-color: #e8f4fe;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #0056b3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  display: block;
+  width: fit-content;
+  margin: 0px auto;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.contact-form button:active {
+  transform: scale(0.98);
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icon.tiktok {
+  color: #333;
+}
+.social-icon.youtube {
+  color: red;
+}
+.social-icon:hover {
+  color: #0056b3;
+  transform: scale(1.1);
+}
+.status-message {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.status-message.success {
+  color: green;
+}
+
+.status-message.error {
+  color: red;
+}

@@ -1,0 +1,112 @@
+/* General Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  height: 60px;
+  box-sizing: border-box;
+  z-index: 9;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+.close-icon {
+  font-weight: 500;
+  font-size: 32px;
+  cursor: pointer;
+}
+.close-icon:hover {
+  color: #2563eb;
+}
+/* Hamburger Animation on Click */
+.hamburger.open .line:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .nav.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 2.4;
+    animation: open-nav .3s ease-in-out forwards;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@keyframes open-nav {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(60px);
+  }
+}
